@@ -1,0 +1,60 @@
+{
+  "actorSpecification": 1,
+  "name": "OrgUpdate",
+  "title": "OrgUpdate",
+  "version": "1.0.0",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "transformation": {
+            "fields": [
+              "job_title",
+              "company_name",
+              "location",
+              "posted_via",
+              "salary",
+              "date",
+              "URL"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "properties": {
+              "job_title": {
+                "label": "Job Title",
+                "format": "text"
+              },
+              "company_name": {
+                "label": "Company",
+                "format": "text"
+              },
+              "location": {
+                "label": "Location",
+                "format": "text"
+              },
+              "posted_via": {
+                "label": "Posted Via",
+                "format": "text"
+              },
+              "salary": {
+                "label": "Salary",
+                "format": "text"
+              },
+              "date": {
+                "label": "Posted Date",
+                "format": "text"
+              },
+              "URL": {
+                "label": "Job Link",
+                "format": "link"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

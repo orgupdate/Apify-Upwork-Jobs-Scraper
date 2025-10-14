@@ -1,0 +1,44 @@
+{
+    "title": "Job Listings Output Schema",
+    "description": "Defines the structure of the scraped job data.",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "jobTitle": {
+          "title": "Job Title",
+          "type": "string",
+          "description": "The title of the job posting."
+        },
+        "companyName": {
+          "title": "Company Name",
+          "type": "string",
+          "description": "The name of the company."
+        },
+        "location": {
+          "title": "Job Location",
+          "type": "string",
+          "description": "The location of the job posting."
+        },
+        "postedDate": {
+          "title": "Posted Date",
+          "type": "string",
+          "description": "Date when the job was posted.",
+          "format": "date-time"
+        },
+        "jobUrl": {
+          "title": "Job URL",
+          "type": "string",
+          "description": "Direct link to the job listing.",
+          "format": "uri"
+        },
+        "description": {
+          "title": "Job Description",
+          "type": "string",
+          "description": "The full job description."
+        }
+      },
+      "required": ["jobTitle", "companyName", "location", "postedDate", "jobUrl"]
+    }
+  }
+  

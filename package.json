@@ -1,0 +1,16 @@
+{
+  "name": "apify-actor",
+  "version": "1.0.0",
+  "description": "The **Google Jobs Scraper** is a powerful tool designed to scrape and aggregate job listings from multiple sources. Whether you're building a job portal, conducting market research, or tracking employment trends, this actor provides structured job data in real time.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apify": "^3.4.5",
+    "axios": "^1.12.2"
+  }
+}
