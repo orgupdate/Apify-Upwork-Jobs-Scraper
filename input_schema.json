@@ -44,7 +44,7 @@
       "title": "Raw Filter - Posted in the last",
       "type": "string",
       "description": "Choose time range.",
-      "enum": ["all", "24h", "48h", "72h", "3days", "7days", "14days"],
+      "enum": ["all", "24h", "48h", "3days", "7days", "14days"],
       "default": "all",
       "editor": "select"
     }
