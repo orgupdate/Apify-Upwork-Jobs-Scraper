@@ -27,7 +27,7 @@ The **Upwork Jobs Scraper** is a powerful tool designed to scrape and aggregate 
 | `locationName`   | String  | (Optional) Enter the city or region.                                                 |
 | `includeKeyword` | String  | (Optional) Comma-separated keywords (e.g., React, Next.js, remote, part time).       |
 | `pagesToFetch`   | Integer | Number of pages to scrape. Minimum: 1. Default: 1.                                   |
-| `datePosted`     | String  | Value can be "all", "24h", "48h", "3days", "7days", "14days". Default: "all". |
+| `datePosted`     | String  | Value can be "today", "3days", "week", "month". Default: "month". |
 
 ### Example Input:
 
