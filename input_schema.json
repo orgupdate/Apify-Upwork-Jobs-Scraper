@@ -40,6 +40,13 @@
       "minimum": 1,
       "editor": "number"
     },
+        "jobType": {
+      "title": "Job Type",
+      "type": "string",
+      "description": "Select job type.",
+      "enum": ["FULLTIME", "PARTTIME", "CONTRACTOR", "INTERN"],
+      "editor": "select"
+    },
     "datePosted": {
       "title": "Raw Filter - Posted in the last",
       "type": "string",
