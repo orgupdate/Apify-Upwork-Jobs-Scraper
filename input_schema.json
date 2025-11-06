@@ -40,18 +40,20 @@
       "minimum": 1,
       "editor": "number"
     },
-        "jobType": {
+   "jobType": {
       "title": "Job Type",
       "type": "string",
       "description": "Select job type.",
       "enum": ["FULLTIME", "PARTTIME", "CONTRACTOR", "INTERN"],
+      "enumTitles": ["Full-time", "Part-time", "Contract", "Internship"],
       "editor": "select"
     },
-     "datePosted": {
+    "datePosted": {
       "title": "Raw Filter - Posted in the last",
       "type": "string",
       "description": "Choose time range.",
       "enum": ["all", "today", "3days", "week", "month"],
+      "enumTitles": ["All", "Today", "3 days", "Week", "Month"],
       "default": "all",
       "editor": "select"
     }
