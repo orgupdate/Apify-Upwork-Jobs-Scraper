@@ -49,7 +49,7 @@
       "editor": "select"
     },
     "datePosted": {
-      "title": "Raw Filter - Posted in the last",
+      "title": "Posted in the last",
       "type": "string",
       "description": "Choose time range.",
       "enum": ["all", "today", "3days", "week", "month"],
