@@ -7,10 +7,13 @@ Actor.main(async () => {
     // 1. Get input from Apify task / API
     const input = await Actor.getInput();
     console.log("Received input:", input);
+        const { userIsPaying } = Actor.getEnv();
+    const isFreeUser = !userIsPaying;
 
     // 2. Call your external API
     const res = await axios.post("https://api.orgupdate.com/search-jobs-v1", {
       ...input,
+      isFreeUser,
       source: "upwork",
     });
 
