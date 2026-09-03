@@ -18,6 +18,18 @@ Whether you're building a job board, analyzing labor market trends, or automatin
 - **📅 Fresh Data** – Scrape "Posted 3 days ago" or "Today" to get the newest opportunities first.
 - **🔌 API Ready** – Seamlessly integrates with Python, Node.js, Zapier, and Make.com.
 
+## 🆓 Free Plan Limits
+
+If you run this Actor on an Apify **free plan**, results are capped to keep it
+sustainable:
+
+- Maximum **10 job results** per run
+- Search is limited to **1 location** and **1 page** of results
+- Results are cached for **24 hours** per unique search
+
+Users on any **paid Apify plan** get the full multi-location, multi-page search
+with no result cap.
+
 ## 🛠 Input Parameters
 
 The actor accepts the following input parameters in JSON format.
