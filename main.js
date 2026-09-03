@@ -50,7 +50,15 @@ Actor.main(async () => {
     jobs = Array.isArray(cached.data) ? cached.data : [];
   } else {
     const res = await axios.post("https://api.orgupdate.com/search-jobs-v1", {
-      ...input,
+      includeKeyword: input.includeKeyword,
+      keyword: input.keyword,
+      countryName: input.countryName,
+      locationName: input.locationName,
+      targetLocations: input.targetLocations,
+      companyName: input.companyName,
+      jobType: input.jobType,
+      datePosted: input.datePosted,
+      pagesToFetch: input.pagesToFetch,
       isFreeUser,
       maxResults: limits.maxResults,
       maxPages: limits.maxPages,
