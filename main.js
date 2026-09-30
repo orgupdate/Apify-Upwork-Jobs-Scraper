@@ -35,8 +35,48 @@ const buildCacheKey = (input, isFreeUser) => {
   return `${truncated}${suffix}`;
 };
 
+const ALLOWED_INPUT_FIELDS = [
+  "includeKeyword",
+  "locationName",
+  "countryName",
+  "pagesToFetch",
+  "companyName",
+  "jobType",
+  "datePosted",
+  "targetLocations",
+];
+
+const REQUIRED_INPUT_FIELDS = ["includeKeyword", "locationName", "countryName"];
+
+const validateInput = (input) => {
+  // Requests using the wrong field names (e.g. copied from a different Actor)
+  // must fail loudly here, before we hit the paid backend -- silently falling
+  // back to defaults turns a typo into an expensive, unwanted broad search.
+  const unsupported = Object.keys(input).filter(
+    (key) => !ALLOWED_INPUT_FIELDS.includes(key)
+  );
+  if (unsupported.length > 0) {
+    throw new Error(
+      `Unsupported parameter${unsupported.length > 1 ? "s" : ""}: ` +
+        `${unsupported.join(", ")}. This Actor only supports: ` +
+        `${ALLOWED_INPUT_FIELDS.join(", ")}.`
+    );
+  }
+
+  const missing = REQUIRED_INPUT_FIELDS.filter((field) => !input[field]);
+  if (missing.length > 0) {
+    throw new Error(
+      `Missing required input field(s): ${missing.join(", ")}. This Actor expects ` +
+        "includeKeyword, locationName, countryName, pagesToFetch (optional: " +
+        "companyName, jobType, datePosted, targetLocations) -- check your input " +
+        "against the Actor's input schema."
+    );
+  }
+};
+
 Actor.main(async () => {
   const input = (await Actor.getInput()) || {};
+  validateInput(input);
   const { userIsPaying } = Actor.getEnv();
   const isFreeUser = !userIsPaying;
   const limits = isFreeUser ? FREE_LIMITS : PAID_LIMITS;
