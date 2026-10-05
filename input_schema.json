@@ -8,7 +8,8 @@
       "title": "Country",
       "type": "string",
       "description": "Select the country for job search.",
-      "default": "",
+      "default": "usa",
+      "prefill": "usa",
       "editor": "textfield"
     },
     "companyName": {
@@ -22,14 +23,16 @@
       "title": "Location Name",
       "type": "string",
       "description": "Enter the city or region.",
-      "default": "",
+      "default": "new york",
+      "prefill": "new york",
       "editor": "textfield"
     },
     "includeKeyword": {
       "title": "Keywords to Include",
       "type": "string",
       "description": "Comma-separated keywords (e.g., React, Next.js).",
-      "default": "",
+      "default": "software engineer",
+      "prefill": "software engineer",
       "editor": "textarea"
     },
     "pagesToFetch": {
@@ -37,6 +40,7 @@
       "type": "integer",
       "description": "Number of pages to scrape.",
       "default": 1,
+      "prefill": 1,
       "minimum": 1,
       "editor": "number"
     },
@@ -55,6 +59,7 @@
       "enum": ["all", "today", "3days", "week", "month"],
       "enumTitles": ["All", "Today", "3 days", "Week", "Month"],
       "default": "all",
+      "prefill": "all",
       "editor": "select"
     }
   },

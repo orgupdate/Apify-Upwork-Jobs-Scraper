@@ -75,7 +75,23 @@ const validateInput = (input) => {
 };
 
 Actor.main(async () => {
-  const input = (await Actor.getInput()) || {};
+  const rawInput = (await Actor.getInput()) || {};
+
+  const input = {
+
+    ...rawInput,
+
+    includeKeyword: rawInput.includeKeyword || "software engineer",
+
+    countryName: rawInput.countryName || "usa",
+
+    locationName: rawInput.locationName || "new york",
+
+    pagesToFetch: rawInput.pagesToFetch || 1,
+
+    datePosted: rawInput.datePosted || "all",
+
+  };
   validateInput(input);
   const { userIsPaying } = Actor.getEnv();
   const isFreeUser = !userIsPaying;
