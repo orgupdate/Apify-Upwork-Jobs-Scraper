@@ -12,6 +12,13 @@
       "prefill": "usa",
       "editor": "textfield"
     },
+    "targetLocations": {
+      "title": "Target Cities",
+      "type": "array",
+      "description": "Enter specific cities for job search (e.g., New York, Austin).",
+      "editor": "stringList",
+      "prefill": []
+    },
     "companyName": {
       "title": "Company Name",
       "type": "string",

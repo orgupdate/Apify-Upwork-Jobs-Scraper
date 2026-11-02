@@ -53,6 +53,7 @@ The Actor accepts the following input parameters in JSON format.
 | `locationName` | String | **Yes** | City, state or region to search in. | - | Any location string (e.g. `"London"`, `"New York, NY"`) |
 | `countryName` | String | **Yes** | Country context for the search. | `"all"` | `"usa"`, `"uk"`, `"india"`, `"all"`, etc. |
 | `pagesToFetch` | Integer | **Yes** | Number of result pages to walk. | `1` | Positive integers |
+| `targetLocations` | Array | No | Search several cities in one run (in addition to `locationName`). | `[]` | List of location strings |
 | `companyName` | String | No | Restrict results to a single employer (e.g. `"an agency"`). | - | Any company name |
 | `jobType` | String | No | Filter by employment type. | - | `FULLTIME`, `PARTTIME`, `CONTRACTOR`, `INTERN` |
 | `datePosted` | String | No | How recent the jobs should be. | `"all"` | `all`, `today`, `3days`, `week`, `month` |
